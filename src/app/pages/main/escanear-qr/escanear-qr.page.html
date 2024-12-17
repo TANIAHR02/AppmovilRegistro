@@ -1,0 +1,13 @@
+<app-header backButton="/main/home" title="Escanear QR"></app-header>
+
+<ion-content>
+  <div *ngIf="mostrarEscaner">
+    <zxing-scanner #scanner
+                  [autostart]="true"
+                  [formats]="allowedFormats"
+                  [previewFitMode]="'cover'"
+                  (scanComplete)="escanearCodigo($event)">
+    </zxing-scanner>
+  </div>
+
+</ion-content>
