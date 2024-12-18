@@ -42,25 +42,25 @@ async takePicture(promptLabelHeader: string) {
     return loading;
   }
 
-  //Toast//
+  //Toast
 
   async presentToast(opts?: ToastOptions){
     const toast = await this.toastCtrl.create(opts);
     toast.present();
   }
 
-  //Enruta a cualquier pagina disponible//
+  //Enruta a cualquier pagina disponible
   
   routerLink(url: string){
     return this.router.navigateByUrl(url);
   }
 
-  //Guarda un elemento en localstorage//
+  //Guarda un elemento en localstorage
   saveInLocalStorage(key: string, value: any) {
     return localStorage.setItem(key, JSON.stringify(value))
   }
 
-  //Obtener un elemento desde localstorage//
+  //Obtener un elemento desde localstorage
   getFromLocalStorage(key: string){
     return JSON.parse(localStorage.getItem(key))
   }

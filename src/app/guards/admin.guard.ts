@@ -1,4 +1,3 @@
-// duoc.guard.ts
 import { Injectable, Inject } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { FirebaseService } from '../services/firebase.service';
@@ -22,10 +21,10 @@ export class DuocGuard implements CanActivate {
 
     return new Observable<boolean>((observer) => {
       const unsubscribe = onAuthStateChanged(auth, (user: User | null) => {
-        if (user && user.email?.endsWith('@duocuc.cl')) {
+        if (user && user.email?.endsWith('@gmail.com')) {
           observer.next(true);
         } else {
-          this.router.navigate(['main/home']); // Redirigir a una página de acceso denegado
+          this.router.navigate(['main/home']); // Redirigir a una pag denegada
           observer.next(false);
         }
         observer.complete();

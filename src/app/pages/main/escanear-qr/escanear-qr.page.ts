@@ -18,10 +18,7 @@ export class EscanearQRPage implements OnInit, OnDestroy {
   mostrarEscaner: boolean = true;
   allowedFormats = [
     BarcodeFormat.QR_CODE,
-    BarcodeFormat.EAN_13,
-    BarcodeFormat.CODE_128,
-    BarcodeFormat.DATA_MATRIX
-    // Agrega otros formatos según sea necesario
+    
   ];
 
   constructor(
